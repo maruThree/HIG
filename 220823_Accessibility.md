@@ -97,5 +97,12 @@ iOS 또는 iPadOS 앱에서 드래그 앤 드롭에 접근할 수 있도록 하�
 개발자 지침은 자막 및 대체 오디오 트랙 선택을 참조하십시오.    
 
 ## 네비게이션
+**VoiceOver 사용자가 모든 요소를 탐색할 수 있는지 확인합니다.** VoiceOver는 화면 요소의 접근성 정보를 사용하여 사람들이 각 요소의 위치와 기능을 이해할 수 있도록 도와줍니다. 시스템에서 제공하는 UI 구성 요소에는 기본적으로 이 접근성 정보가 포함되지만 사용자가 정보를 제공하지 않는 한 VoiceOver는 사용자가 사용자 지정 요소를 검색하고 사용하는 데 도움이 될 수 없습니다. 개발자 지침은 내게 필요한 [Accessibility Modifiers](https://developer.apple.com/documentation/swiftui/view-accessibility)를 참조하십시오.    
+
+**요소를 그룹화, 순서 지정 또는 연결하는 방법을 지정하여 VoiceOver 환경을 개선합니다.** 근접성, 정렬 및 기타 상황별 단서는 시각장애인이 화면 요소 간의 관계를 인식하는 데 도움이 될 수 있지만 VoiceOver 사용자에게는 이러한 단서가 잘 작동하지 않습니다. 앱에서 요소 간의 관계가 시각적으로만 표시되는 장소를 검사하고 VoiceOver와의 관계를 설명합니다.     
+
+**화면 내용 또는 레이아웃이 변경될 때 VoiceOver에 알립니다.** VoiceOver 사용자는 콘텐츠나 레이아웃의 예기치 않은 변경으로 인해 매우 혼란스러울 수 있습니다. 이는 화면에 대한 마인드 맵이 더 이상 정확하지 않다는 것을 의미하기 때문입니다. VoiceOver 및 기타 보조 기술이 사람들이 화면에 대한 이해를 업데이트하는 데 도움이 될 수 있도록 화면 변경 사항을 보고하는 것이 중요합니다. 개발자 지침은 UIAaccessibility를 참조하십시오.[UIAccessibility.Notification](https://developer.apple.com/documentation/uikit/uiaccessibility/notification) (UIKit) 또는 [NSAccessibility.Notification](https://developer.apple.com/documentation/appkit/nsaccessibility/notification) (AppKit).    
+
+**컨트롤이 다른 웹 페이지 또는 앱을 열 때 사람들이 예측할 수 있도록 도와줍니다.** 예상치 못한 상황 변화는 혼란을 야기할 수 있고 사람들이 갑자기 화면 환경의 정신 모델을 재구성해야 한다. 문맥의 잠재적인 변화에 주의를 끄는 한 가지 방법은 단추의 제목에 줄임표를 추가하는 것이다. 시스템 전체에서 줄임표 후행은 사용자가 작업을 완료할 수 있는 다른 창이나 보기를 연다는 것을 알리는 버튼의 표준 방법입니다. 예를 들어 iOS 및 iPadOS의 메일은 메시지 이동 단추에 줄임표를 추가하여 별도의 보기가 열리며 사용자가 선택할 수 있는 수신처를 나열합니다.
 
 
